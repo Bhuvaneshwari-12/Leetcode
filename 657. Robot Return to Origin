@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String moves = sc.nextLine();
+        int hor=0;
+        int ver=0;
+        for(char move: moves.toCharArray()){
+            if(move=='U') hor++;
+            else if(move=='D') hor--;
+            else if(move=='R') ver++;
+            else if(move=='L') ver--;
+        }
+        if(hor==0 && ver==0){
+            System.out.print("True");
+        }
+        else {
+            System.out.print("False");
+        }
+    }
+}
